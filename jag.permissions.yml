@@ -1,0 +1,15 @@
+member management:
+  title: 'Ledenbeheer'
+  description: 'Ledenbeheer'
+
+member:
+  title: 'Persoonlijke pagina'
+  description: 'Persoonlijke pagina '
+
+board member:
+  title: 'Bestuurslid'  
+  description: 'Bestuurslid'
+
+tester:
+  title: 'tester'
+  description: 'Activeer test opties'

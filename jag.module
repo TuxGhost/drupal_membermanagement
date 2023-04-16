@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * screens for the module.
+ * see twig for drupal
+ */
+
+ function jag_theme($existing, $type, $theme , $path) {
+  return [
+    'jag' => [
+      'variables' => ['title' => NULL , 'header' => NULL, 'data' => NULL],
+    ]
+  ];
+ }
+
+/**
+ * Implements hook_entity_operation() for adding drupal user into JAG memberschip.
+ */
+function  jag_entity_operation_alter(array &$operations, $entity)
+{
+  $entityTypeId = $entity->getEntityTypeId();
+  if ($entityTypeId !== 'user') {
+    return;
+  }
+
+  $uid = $entity->id();
+
+  $editUrl = \Drupal\Core\Url::fromRoute('jag.user.import', ['user' => $uid]);
+  $operations['import_to_jag'] = array(
+    'title' => t('export user info to jag membeship'),
+    'weight' => 31,
+    'url' => $editUrl,
+  );
+}

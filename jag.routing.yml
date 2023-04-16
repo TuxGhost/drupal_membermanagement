@@ -1,0 +1,251 @@
+ledenbeheer.content:
+  path: '/jag/ledenbeheer'
+  defaults:
+    _controller: '\Drupal\jag\Controller\LedenBeheerController::mainPage'
+    _title: 'JAG Ledenbeheer 2'
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+    _access: 'TRUE'
+    
+ledenbeheer.form:
+  path: 'ledenbeheerform'
+  defaults:    
+    _title: 'JAG Ledenbeheer invoer'
+    _form: '\Drupal\jag\Form\LedenBeheerForm'
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+    _access: 'TRUE'
+
+lid.content:
+  path: '/jag/lid/{lid}'
+  defaults:
+    _title: 'Persoonlijke pagina'
+    _controller: '\Drupal\jag\Controller\MemberController::mainPage'    
+    lid: currentuser
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+    _access: 'TRUE'
+  
+
+lid.form:
+  path: 'lid'
+  defaults:
+    _form: '\Drupal\jag\Form\LedenBeheerForm'
+    _title: 'JAG Ledenbeheer invoer'    
+  requirements:
+    _access: 'true'
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+
+evenementenbeheer.content:
+  path: '/jag/evenementenbeheer/{event}'
+  defaults:
+    _controller: '\Drupal\jag\Controller\EvenementenBeheerController::mainPage'
+    _title: 'JAG Evenementenbeheer'
+    event: 0
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+evenementen.content:
+  path: '/jag/evenementen/{event}'
+  defaults:
+    _controller: '\Drupal\jag\Controller\EvenementenController::mainPage'
+    _title: 'JAG Evenementen'
+    event: 0
+  requirements:
+    _permission: 'access content'    
+    _user_is_logged_in: 'true'
+
+evenementenbeheer.form:
+  path: '/jag/evenement/{event}'
+  defaults:
+    _form: '\Drupal\jag\Form\Evenement'
+    _title: 'JAG Evenement'  
+    event: 0  
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+  
+
+templatebeheer.content:
+  path: '/jag/templatebeheer'
+  defaults:
+    _controller: '\Drupal\jag\Controller\TemplateBeheerController::mainPage'
+    _title: 'JAG Templatebeheer'
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+
+jagbeheer.content:
+  path: '/jag/beheer'
+  defaults:
+    _controller: '\Drupal\jag\Controller\JAGBeheer::mainPage'
+    _title: 'JAG beheer'
+  requirements:
+    _permission: 'member management'  
+    _user_is_logged_in: 'true'
+
+jagadmin.content:
+  path: '/jag/admin'
+  defaults:
+    _controller: '\Drupal\jag\Controller\JAGAdminController::mainPage'
+    _title: 'JAG Administratie'
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+
+transacties.content:
+  path: '/jag/transacties'
+  defaults:
+    _controller: '\Drupal\jag\Controller\TransactionsController::mainPage'
+    _title: 'JAG Transactions.'
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+
+transacties.form:
+  path: '/transactiesform'
+  defaults:
+    _form: '\Drupal\jag\Form\TransactiesForm'
+    _title: 'JAG Transacties'    
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+
+abonnementen.content:
+  path: '/jag/abonnementen'
+  defaults:
+    _controller: '\Drupal\jag\Controller\AbonnementenController::mainPage'
+    _title: 'Abonnementen'
+  requirements:
+    _permission: 'member management'
+    _user_is_logged_in: 'true'
+
+
+faq.content:
+  path: '/jag/faq'
+  defaults:
+    _controller: '\Drupal\jag\Controller\FaqController::mainPage'
+    _title: 'JAG FAQ'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+faqleden.content:
+  path: '/jag/faqleden'
+  defaults:
+    _controller: '\Drupal\jag\Controller\FaqLedenController::mainPage'
+    _title: 'JAG FAQ Leden'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+bestuur.content:
+  path: '/jag/bestuur'
+  defaults:
+    _controller: '\Drupal\jag\Controller\bestuurController::mainPage'
+    _title: 'JAG FAQ'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+news.content:
+  path: '/jag/news'
+  defaults:
+    _controller: '\Drupal\jag\Controller\newsController::mainPage'
+    _title: 'Nieuws'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+
+
+wallpost.content:
+  path: '/jag/wall'
+  defaults:
+    _controller: '\Drupal\jag\Controller\WallController::mainPage'
+    _title: 'Wall'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+abonnementenbeheer.form:
+  path: '/abonnementenform'
+  defaults:
+    _form: '\Drupal\jag\Form\AbonnementenForm'
+    _title: 'JAG Abonnementen'    
+  requirements:
+    _role: 'member management'
+    _user_is_logged_in: 'true'
+
+jagadmin.form:
+  path: 'jag/admin'
+  defaults:
+    _form: '\Drupal\jag\Form\JAGAdminForm'
+    _title: 'Administration JAG'
+  requirements:
+    _permission: 'access administration pages'
+    _user_is_logged_in: 'true'
+    _access: 'TRUE'
+
+jag.admin_settings_form:
+  path: '/admin/jag'
+  defaults:
+    _form: '\Drupal\jag\Form\JAGAdminForm'
+    _title: 'Administration JAG'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+
+eventstopoverview.content:
+  path: 'jag/admin/eventstop'
+  defaults:
+    _controller: '\Drupal\jag\Controller\EventsTopOverviewController:mainPage'
+    _title: 'Algemeen overzicht'
+  requirements:
+    _permission: 'board member'
+    _user_is_logged_in: 'true'
+
+eventresponse.form:
+  path: 'eventresponse'
+  defaults:
+    _form: '\Drupal\jag\Form\EventResponseForm'
+    _title: 'JAG Ledenbeheer invoer'    
+  requirements:
+    _access: 'true'
+    _permission: 'access content'
+    _user_is_logged_in: 'true'
+
+jag.user.import:
+  path: '/user/{user}/import'
+  defaults:
+    _controller: '\Drupal\jag\Controller\MemberController::import'
+    _title: 'Export to JAG'
+  requirements:
+    _permission: 'administer users'
+  options:
+    parameters:
+      user:
+        type: entity:user  
+
+jag.extra.user_defaults:
+  #path: '/user/{user}/edit/extra'
+  #path: /jag/lid/{lid}
+  path: '/user/{user}/extra'
+  defaults:
+    _controller: '\Drupal\jag\Controller\MemberController::userProfile'
+    _title: 'Jag User profile'
+  requirements:
+    _permission: 'administer users'
+    user: \d+
+  options:
+    parameters:
+      user:
+        type: entity:user

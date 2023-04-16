@@ -1,0 +1,10 @@
+jag.extra.user_defaults:
+  route_name: jag.extra.user_defaults
+  parent_id: entity.user.edit_form
+  title: 'Jag profiel'
+  weight: 10
+
+jag.entity.user.edit.form:
+  route_name: entity.user.edit_form
+  parent_id: entity.user.edit_form
+  title: Profile

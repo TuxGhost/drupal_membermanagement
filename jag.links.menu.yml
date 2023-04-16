@@ -1,0 +1,76 @@
+jag.admin_settings.form:
+  title: 'JAG systeem administratie'
+  route_name: jag.admin_settings_form
+  description: 'JAG administratie'
+  parent: system.admin_config_system
+  weight: 99
+  
+jagevenementen.menu:  
+    title: 'Kalender'
+    description: 'Kalender'        
+    route_name: evenementen.content
+    weight: 89   
+    menu_name: main
+
+wall.menu:  
+    title: 'Wall'
+    description: 'wall'        
+    route_name: wallpost.content
+    weight: 90    
+    menu_name: main
+
+lid.menu:
+  title: 'Persoonlijke pagina'
+  description: 'Persoonlijke pagina van lid'
+  route_name: lid.content
+  weight: 91  
+  menu_name: main
+
+faq.menu:
+  title: 'FAQ'
+  description: 'Frequently Asked Questions'
+  route_name: faq.content
+  weight: 94
+  menu_name: main
+    
+faqleden.menu:
+  title: 'FAQ Leden'
+  description: 'Frequently Asked Questions'
+  route_name: faqleden.content
+  weight: 95
+  menu_name: main
+
+bestuur.menu:
+  title: 'Het Bestuur'
+  description: 'Het Bestuur'
+  route_name: bestuur.content
+  weight: 96
+  menu_name: main
+
+ledenbeheer.menu:  
+    title: 'Ledenbeheer'
+    description: 'Ledenbeheer'        
+    route_name: ledenbeheer.content
+    weight: 97    
+    menu_name: main 
+
+jagtransacties.menu:
+  title: 'Transacties'
+  description: 'Transacties'
+  route_name: transacties.content
+  weight: 98
+  menu_name: main
+
+jagabonnementen.menu:
+  title: 'Abonnementen'
+  description: 'Abonnementen'
+  route_name: abonnementen.content
+  weight: 99
+  menu_name: main
+
+topusers.menu:
+   title: 'Gebruikers top'   
+   description: 'Gebruikers top'
+   route_name: eventstopoverview.content
+   weight: 20
+   menu_name: footer
