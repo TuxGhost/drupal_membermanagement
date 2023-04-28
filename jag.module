@@ -23,7 +23,7 @@ function  jag_entity_operation_alter(array &$operations, $entity)
   if ($entityTypeId !== 'user') {
     return;
   }
-
+ 
   $uid = $entity->id();
 
   $editUrl = \Drupal\Core\Url::fromRoute('jag.user.import', ['user' => $uid]);
@@ -33,3 +33,4 @@ function  jag_entity_operation_alter(array &$operations, $entity)
     'url' => $editUrl,
   );
 }
+ 

@@ -74,3 +74,4 @@ topusers.menu:
    route_name: eventstopoverview.content
    weight: 20
    menu_name: footer
+   
